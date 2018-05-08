@@ -213,7 +213,7 @@ var uiBlock = function () {
             // apiPrefix
 
             apiList = [
-                { chainId: 1, name: "Mainnet", url: "https://mainnet.nebulas.io", contract:"n1sziiuEvDaTjimoEZ9sTMiWmBi84i3ox2t" },
+                { chainId: 1, name: "Mainnet", url: "https://mainnet.nebulas.io", contract:"n1mx5Khk4YFH2DJZAmVTjMtkxMT1HJV8Ns1" },
                 //{ chainId: 1001, name: "Testnet", url: "https://testnet.nebulas.io", contract:"n1snsrCQcfKfspaytPvKvZcRWuYYDCcEyeC" }
             ];
             apiPrefix = (localSave.getItem("apiPrefix") || "").toLowerCase();

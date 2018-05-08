@@ -58,6 +58,7 @@ var uiBlock = function () {
             Array.isArray(dic[i]) ? bag[i].apply(null, dic[i]) : bag[i](dic[i]);
 
         function footer(selector) {
+            return;
             i18n.run($(selector)
                 .addClass("container footer")
                 .html(
@@ -213,7 +214,7 @@ var uiBlock = function () {
 
             apiList = [
                 { chainId: 1, name: "Mainnet", url: "https://mainnet.nebulas.io", contract:"n1sziiuEvDaTjimoEZ9sTMiWmBi84i3ox2t" },
-                { chainId: 1001, name: "Testnet", url: "https://testnet.nebulas.io", contract:"n1snsrCQcfKfspaytPvKvZcRWuYYDCcEyeC" }
+                //{ chainId: 1001, name: "Testnet", url: "https://testnet.nebulas.io", contract:"n1snsrCQcfKfspaytPvKvZcRWuYYDCcEyeC" }
             ];
             apiPrefix = (localSave.getItem("apiPrefix") || "").toLowerCase();
             sApiButtons = "";
@@ -226,10 +227,10 @@ var uiBlock = function () {
             localSave.setItem("contract", apiList[i].contract);
             sApiText = apiList[i].name;
 
-            for (i = 0, len = apiList.length; i < len; ++i)
-                sApiButtons += '<button class="' +
-                    (apiPrefix == apiList[i].url ? "active " : "") + 'dropdown-item" data-i=' + i + ">" +
-                    apiList[i].name + "</button>";
+            //for (i = 0, len = apiList.length; i < len; ++i)
+            //    sApiButtons += '<button class="' +
+            //        (apiPrefix == apiList[i].url ? "active " : "") + 'dropdown-item" data-i=' + i + ">" +
+            //        apiList[i].name + "</button>";
 
             //
             // lang
@@ -255,11 +256,11 @@ var uiBlock = function () {
                     "<div class=row>" +
                     "    <div class=col></div>" +
                     "    <div class=col>" +
-                    "        <div class=dropdown>" +
-                    '            <button class="btn dropdown-toggle" id=logo-main-dropdown-1 data-toggle=dropdown aria-haspopup=true aria-expanded=false>' + sApiText + "</button>" +
-                    '            <div class="dropdown-menu api" aria-labelledby=logo-main-dropdown-1>' + sApiButtons +
-                    "            </div>" +
-                    "        </div>" +
+                    // "        <div class=dropdown>" +
+                    // '            <button class="btn dropdown-toggle" id=logo-main-dropdown-1 data-toggle=dropdown aria-haspopup=true aria-expanded=false>' + sApiText + "</button>" +
+                    // '            <div class="dropdown-menu api" aria-labelledby=logo-main-dropdown-1>' + sApiButtons +
+                    // "            </div>" +
+                    // "        </div>" +
                     "        <div class=dropdown>" +
                     '            <button class="btn dropdown-toggle" id=logo-main-dropdown-2 data-toggle=dropdown aria-haspopup=true aria-expanded=false data-i18n=name></button>' +
                     '            <div class="dropdown-menu lang" aria-labelledby=logo-main-dropdown-2>' + sLangButtons +
@@ -267,7 +268,7 @@ var uiBlock = function () {
                     "        </div>" +
                     "    </div>" +
                     "</div>")
-                .on("click", ".api > button", onClickMenuApi)
+                //.on("click", ".api > button", onClickMenuApi)
                 .on("click", ".lang > button", onClickMenuLang),
                 lang);
 

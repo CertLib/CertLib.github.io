@@ -1,0 +1,15 @@
+a {
+  color: #00B7FF;
+}
+
+span.warning{
+  color:#eeaa00;
+}
+
+span.error{
+  color:#dd0000;
+}
+
+span.ok{
+  color:#00aa00;
+}

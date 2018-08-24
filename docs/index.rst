@@ -8,7 +8,7 @@ Welcome to nebulas wiki's documentation!
 
 .. toctree::
    :maxdepth: 4
-   :caption: Contents:
+   :glob:
 
    README
    SUMMARY
